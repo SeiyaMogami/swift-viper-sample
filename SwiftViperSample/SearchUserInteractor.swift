@@ -7,3 +7,23 @@
 //
 
 import Foundation
+
+protocol SearchUserInteractorDelegate {
+    weak var output: SearchUserInteractorOutputDelegate? { get set }
+    var dataStore: SearchUserDataStoreDelegate? { get set }
+    func retriveUsers(_ keyword: String)
+}
+
+class SearchUserInteractor: SearchUserInteractorDelegate {
+    weak var output: SearchUserInteractorOutputDelegate?
+    var dataStore: SearchUserDataStoreDelegate?
+
+    func retriveUsers(_ keyword: String) {
+        print(keyword)
+        dataStore?.fetchUsers(keyword, completion: { [weak self] data in
+            self?.output?.didRetriveUsers(data)
+            }, error: { [weak self] err in
+                self?.output?.didFailToRetriveUsers(err)
+        })
+    }
+}

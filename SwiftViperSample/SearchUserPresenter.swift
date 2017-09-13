@@ -14,7 +14,7 @@ protocol SearchUserPresenterDelegate: class {
     var wireframe: SearchUserWireframeDelegate? { get set }
 
     func retriveUsers(_ keyword: String)
-    func userSelected(_ name: String)
+    func showDetail(_ user: User)
 }
 
 class SearchUserPresenter: SearchUserPresenterDelegate {
@@ -23,10 +23,26 @@ class SearchUserPresenter: SearchUserPresenterDelegate {
     var wireframe: SearchUserWireframeDelegate?
 
     func retriveUsers(_ keyword: String) {
-        print(keyword)
+        interactor?.retriveUsers(keyword)
     }
 
-    func userSelected(_ name: String) {
+    func showDetail(_ user: User) {
 
+    }
+}
+
+protocol SearchUserInteractorOutputDelegate: class {
+    func didRetriveUsers(_ users: [ApiUser])
+    func didFailToRetriveUsers(_ error: Error)
+}
+
+extension SearchUserPresenter: SearchUserInteractorOutputDelegate {
+    func didRetriveUsers(_ users: [ApiUser]) {
+        print(users)
+        view?.showUsers(users.map{ User(name: $0.name) })
+    }
+
+    func didFailToRetriveUsers(_ error: Error) {
+        view?.showError(error)
     }
 }

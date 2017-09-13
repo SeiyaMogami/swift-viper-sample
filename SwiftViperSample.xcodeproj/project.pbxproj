@@ -12,6 +12,7 @@
 		521D01381F68F3A900876301 /* SearchUserPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 521D01371F68F3A900876301 /* SearchUserPresenter.swift */; };
 		521D013A1F68F55800876301 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 521D01391F68F55800876301 /* User.swift */; };
 		521D013C1F68F86C00876301 /* SearchUserWireframe.swift in Sources */ = {isa = PBXBuildFile; fileRef = 521D013B1F68F86C00876301 /* SearchUserWireframe.swift */; };
+		521D013E1F69003A00876301 /* SearchUserDataStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = 521D013D1F69003A00876301 /* SearchUserDataStore.swift */; };
 		5251EE501F60140700528A44 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5251EE4F1F60140700528A44 /* AppDelegate.swift */; };
 		5251EE521F60140700528A44 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5251EE511F60140700528A44 /* ViewController.swift */; };
 		5251EE551F60140700528A44 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5251EE531F60140700528A44 /* Main.storyboard */; };
@@ -47,6 +48,7 @@
 		521D01371F68F3A900876301 /* SearchUserPresenter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SearchUserPresenter.swift; sourceTree = "<group>"; };
 		521D01391F68F55800876301 /* User.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
 		521D013B1F68F86C00876301 /* SearchUserWireframe.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SearchUserWireframe.swift; sourceTree = "<group>"; };
+		521D013D1F69003A00876301 /* SearchUserDataStore.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SearchUserDataStore.swift; sourceTree = "<group>"; };
 		5251EE4C1F60140700528A44 /* SwiftViperSample.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SwiftViperSample.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		5251EE4F1F60140700528A44 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		5251EE511F60140700528A44 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -102,6 +104,18 @@
 			name = Pods;
 			sourceTree = "<group>";
 		};
+		521D013F1F6905A000876301 /* SearchUser */ = {
+			isa = PBXGroup;
+			children = (
+				521D013B1F68F86C00876301 /* SearchUserWireframe.swift */,
+				521D01351F68F28F00876301 /* SearchUserView.swift */,
+				521D01371F68F3A900876301 /* SearchUserPresenter.swift */,
+				5251EE831F601DC600528A44 /* SearchUserInteractor.swift */,
+				521D013D1F69003A00876301 /* SearchUserDataStore.swift */,
+			);
+			name = SearchUser;
+			sourceTree = "<group>";
+		};
 		5251EE431F60140700528A44 = {
 			isa = PBXGroup;
 			children = (
@@ -127,6 +141,7 @@
 		5251EE4E1F60140700528A44 /* SwiftViperSample */ = {
 			isa = PBXGroup;
 			children = (
+				521D013F1F6905A000876301 /* SearchUser */,
 				5251EE4F1F60140700528A44 /* AppDelegate.swift */,
 				5251EE511F60140700528A44 /* ViewController.swift */,
 				5251EE531F60140700528A44 /* Main.storyboard */,
@@ -135,11 +150,7 @@
 				5251EE5B1F60140700528A44 /* Info.plist */,
 				5251EE7F1F601AFF00528A44 /* ApiUser.swift */,
 				5251EE811F601B5D00528A44 /* UserRequest.swift */,
-				5251EE831F601DC600528A44 /* SearchUserInteractor.swift */,
-				521D01351F68F28F00876301 /* SearchUserView.swift */,
-				521D01371F68F3A900876301 /* SearchUserPresenter.swift */,
 				521D01391F68F55800876301 /* User.swift */,
-				521D013B1F68F86C00876301 /* SearchUserWireframe.swift */,
 			);
 			path = SwiftViperSample;
 			sourceTree = "<group>";
@@ -376,6 +387,7 @@
 				5251EE841F601DC600528A44 /* SearchUserInteractor.swift in Sources */,
 				5251EE821F601B5D00528A44 /* UserRequest.swift in Sources */,
 				5251EE801F601AFF00528A44 /* ApiUser.swift in Sources */,
+				521D013E1F69003A00876301 /* SearchUserDataStore.swift in Sources */,
 				521D01381F68F3A900876301 /* SearchUserPresenter.swift in Sources */,
 				521D013A1F68F55800876301 /* User.swift in Sources */,
 				521D01361F68F28F00876301 /* SearchUserView.swift in Sources */,

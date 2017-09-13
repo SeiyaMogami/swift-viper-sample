@@ -49,7 +49,7 @@ extension SearchUserView: SearchUserViewDelegate {
     }
 
     func showError(_ error: Error) {
-        // show error
+        print(error)
     }
 }
 
