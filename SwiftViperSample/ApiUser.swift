@@ -7,3 +7,12 @@
 //
 
 import Foundation
+import Himotoki
+
+struct ApiUser: Himotoki.Decodable {
+    let name: String
+
+    static func decode(_ e: Extractor) throws -> ApiUser {
+        return try ApiUser(name: e <| "login")
+    }
+}
