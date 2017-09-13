@@ -10,6 +10,8 @@
 		2FFF125ECFA5130A1006E1FA /* Pods_SwiftViperSample.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 557989F5BC08436117340838 /* Pods_SwiftViperSample.framework */; };
 		521D01361F68F28F00876301 /* SearchUserView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 521D01351F68F28F00876301 /* SearchUserView.swift */; };
 		521D01381F68F3A900876301 /* SearchUserPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 521D01371F68F3A900876301 /* SearchUserPresenter.swift */; };
+		521D013A1F68F55800876301 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 521D01391F68F55800876301 /* User.swift */; };
+		521D013C1F68F86C00876301 /* SearchUserWireframe.swift in Sources */ = {isa = PBXBuildFile; fileRef = 521D013B1F68F86C00876301 /* SearchUserWireframe.swift */; };
 		5251EE501F60140700528A44 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5251EE4F1F60140700528A44 /* AppDelegate.swift */; };
 		5251EE521F60140700528A44 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5251EE511F60140700528A44 /* ViewController.swift */; };
 		5251EE551F60140700528A44 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5251EE531F60140700528A44 /* Main.storyboard */; };
@@ -43,6 +45,8 @@
 		0A5B1552429B8AC03A698B82 /* Pods-SwiftViperSample.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SwiftViperSample.debug.xcconfig"; path = "Pods/Target Support Files/Pods-SwiftViperSample/Pods-SwiftViperSample.debug.xcconfig"; sourceTree = "<group>"; };
 		521D01351F68F28F00876301 /* SearchUserView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SearchUserView.swift; sourceTree = "<group>"; };
 		521D01371F68F3A900876301 /* SearchUserPresenter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SearchUserPresenter.swift; sourceTree = "<group>"; };
+		521D01391F68F55800876301 /* User.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
+		521D013B1F68F86C00876301 /* SearchUserWireframe.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SearchUserWireframe.swift; sourceTree = "<group>"; };
 		5251EE4C1F60140700528A44 /* SwiftViperSample.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SwiftViperSample.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		5251EE4F1F60140700528A44 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		5251EE511F60140700528A44 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -134,6 +138,8 @@
 				5251EE831F601DC600528A44 /* SearchUserInteractor.swift */,
 				521D01351F68F28F00876301 /* SearchUserView.swift */,
 				521D01371F68F3A900876301 /* SearchUserPresenter.swift */,
+				521D01391F68F55800876301 /* User.swift */,
+				521D013B1F68F86C00876301 /* SearchUserWireframe.swift */,
 			);
 			path = SwiftViperSample;
 			sourceTree = "<group>";
@@ -343,12 +349,16 @@
 				"${BUILT_PRODUCTS_DIR}/APIKit/APIKit.framework",
 				"${BUILT_PRODUCTS_DIR}/Himotoki/Himotoki.framework",
 				"${BUILT_PRODUCTS_DIR}/Result/Result.framework",
+				"${BUILT_PRODUCTS_DIR}/RxCocoa/RxCocoa.framework",
+				"${BUILT_PRODUCTS_DIR}/RxSwift/RxSwift.framework",
 			);
 			name = "[CP] Embed Pods Frameworks";
 			outputPaths = (
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/APIKit.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Himotoki.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Result.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RxCocoa.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RxSwift.framework",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
@@ -362,10 +372,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				521D013C1F68F86C00876301 /* SearchUserWireframe.swift in Sources */,
 				5251EE841F601DC600528A44 /* SearchUserInteractor.swift in Sources */,
 				5251EE821F601B5D00528A44 /* UserRequest.swift in Sources */,
 				5251EE801F601AFF00528A44 /* ApiUser.swift in Sources */,
 				521D01381F68F3A900876301 /* SearchUserPresenter.swift in Sources */,
+				521D013A1F68F55800876301 /* User.swift in Sources */,
 				521D01361F68F28F00876301 /* SearchUserView.swift in Sources */,
 				5251EE521F60140700528A44 /* ViewController.swift in Sources */,
 				5251EE501F60140700528A44 /* AppDelegate.swift in Sources */,
